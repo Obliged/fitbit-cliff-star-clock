@@ -1,6 +1,6 @@
 <svg class="background">
-  <image href="bg.png" />
-  <text id="clockShadow" class="foreground" opacity="0.4" />
-  <text id="clockLabel" class="foreground" />
-  <image href="fg.png" />
+  <image href="bgfelles.png" />
+  <text id="clockShadow" class="foreground" opacity="0.2" />
+  <text id="clockLabel" class="foreground" opacity="0.8"/>
+  <image id="fgimage" href="fgsmil.png" />
 </svg>

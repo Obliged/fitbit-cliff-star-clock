@@ -12,19 +12,13 @@ function mySettings(props) {
                  }
                },
                {
-                 name: "green",
+                 name: "aquamarine",
                  value: {
-                   foreground: "#00ff00"
+                   foreground: "#93FFE8"
                  }
                },
                {
                  name: "blue",
-                 value: {
-                   foreground: "#00d1fb"
-                 }
-               },
-               {
-                 name: "cyan",
                  value: {
                    foreground: "#00d1fb"
                  }
@@ -40,7 +34,14 @@ function mySettings(props) {
                  value: {
                    foreground: "#FFFFFF"
                  }
-               }]
+               },
+               {
+                 name: "orange",
+                 value: {
+                   foreground: "#f57222"
+                 }
+               }
+               ]
             }
           />
     </Page>

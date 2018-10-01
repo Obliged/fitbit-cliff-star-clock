@@ -1,14 +1,30 @@
 {
   "fitbit": {
     "appType": "clockface",
-    "appDisplayName": "Cliff Star",
+    "appDisplayName": "Ragnhilds klokke",
     "iconFile": "",
     "wipeColor": "",
     "requestedPermissions": [],
     "i18n": {
       "en": {
-        "name": "Cliff Star"
+        "name": "Ragnhilds klokke"
       }
-    }
+    },
+    "buildTargets": [
+      "meson",
+      "higgs"
+    ],
+    "devDependencies": {
+      "@fitbit/sdk": "^1.0.2",
+      "@fitbit/sdk-cli": "^1.0.1"
+    },
+    "appUUID": "dd8bb6da-9c41-472d-aa7d-79bb64c546d1"
+  },
+  "dependencies": {
+    "@fitbit/sdk": "^1.0.2",
+    "@fitbit/sdk-cli": "^1.0.1"
+  },
+  "scripts": {
+    "build": "fitbit-build"
   }
 }

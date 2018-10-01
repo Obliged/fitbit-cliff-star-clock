@@ -12,6 +12,9 @@ clock.granularity = "minutes";
 
 let clockLabel = document.getElementById("clockLabel");
 let clockShadow = document.getElementById("clockShadow");
+let fgimage = document.getElementById("fgimage");
+let onCounter = 0;
+let kissing = false;
 
 const SETTINGS_FILE = "settings.json";
 let settings = loadSettings();
@@ -34,6 +37,25 @@ function updateClock(evt) {
 }
 
 clock.ontick = (evt) => updateClock(evt);
+
+const kissTimer = (evt) => {
+  if(display.on) {
+    if( onCounter > 5 && !kissing ) {
+      kissing = true;
+      fgimage.href = "fgkyss.png";
+      onCounter = 0;
+    }
+    else if (kissing) {
+      kissing = false;
+      fgimage.href = "fgsmil.png";
+    }
+    else {
+      onCounter = onCounter + 1;
+    }
+  }
+}
+
+display.onchange = kissTimer;
 
 messaging.peerSocket.onmessage = function(evt) {
   if (evt.data && evt.data.foreground) {
